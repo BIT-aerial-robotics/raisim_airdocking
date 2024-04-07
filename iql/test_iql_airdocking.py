@@ -151,19 +151,15 @@ class AirD(RLBaseEnv):
 
 
 env = AirD(
-            # destandardize_obs_info_path='/home/ming/aaa/AquaML-2.2.0/dataset/Joint200/normalize_info.npy',
-            # destandardize_info_path='/media/ming/新加卷/aaa/models/TD3BC/TD3BCParam/2k',
+            # destandardize_obs_info_path='/dataset/Joint200/normalize_info.npy',
+            # destandardize_info_path='/models/TD3BC/TD3BCParam/2k',
             )
 osb_shape_dict = env.obs_info.shape_dict
 
 policy = CompletePolicy(
     actor=Actor_net,
     obs_shape_dict=osb_shape_dict,
-    # checkpoint_path='/home/ming/aaa/AquaML-2.2.0/Tutorial2/debug_td3bcaird_suc/history_model/TD3BC/15000',
-    # checkpoint_path='/media/ming/新加卷/aaa/models/TD3BC/JOINT5200/149000',
-    checkpoint_path='/home/ming/aaa/AquaML-2.2.0/Tutorial2/debug_iqlaird_joint/history_model/IQL/83000',
-    # checkpoint_path='/media/ming/新加卷/aaa/models/ppo/1191',
-    # checkpoint_path='/home/ming/aaa/AquaML-2.2.0/Tutorial2/debug_iqlaird_test1/history_model/IQL/900',
+    checkpoint_path='/history_model/IQL/83000',
     using_obs_scale=False,
 )
 
@@ -175,6 +171,6 @@ test_policy = TestPolicy(
 test_policy.collect(
     episode_num=100,
     episode_steps=2000,
-    data_path='/home/ming/aaa/AquaML-2.2.0/Tutorial2/debug_iqlaird_suc1/test_info'
+    data_path='/debug_iqlaird_suc1/test_info'
 )
 #  print(np.mean(test_policy.step_info))

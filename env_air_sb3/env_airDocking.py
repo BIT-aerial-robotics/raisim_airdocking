@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home/ming/aaa/quad_raisim")
+sys.path.append("..")
 import numpy as np
 import gym
 from gym import spaces
@@ -27,8 +27,8 @@ class AirDockingEnv(gym.Env):
     train_type  : only train some one or two
     """
                                                                         #air_docking_sou
-    def __init__(self,file_1="/home/ming/aaa/quad_raisim/rsc/AirDocking_6/airDocking.urdf",
-                file_2 = "/home/ming/aaa/quad_raisim/rsc/AirDocking_6/airDocking.urdf" ,
+    def __init__(self,file_1="./rsc/AirDocking_6/airDocking.urdf",
+                file_2 = "./rsc/AirDocking_6/airDocking.urdf" ,
                 reward_type = "sou",
                 rew_coeff = dict(),
                 train_type = "double" ,

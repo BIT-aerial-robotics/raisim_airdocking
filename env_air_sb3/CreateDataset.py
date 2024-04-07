@@ -76,8 +76,8 @@ if __name__ == '__main__':
 
 
 
-    data_file_path = "/home/ming/aaa/AquaML-2.2.0/dataset/ExpertAirDocking3000/test/"
-    success_file_path = "/home/ming/aaa/AquaML-2.2.0/dataset/ExpertAirDocking3000/test/success/"
+    data_file_path = "/dataset/ExpertAirDocking3000/test/"
+    success_file_path = "/dataset/ExpertAirDocking3000/test/success/"
     ExpertAirDocking.save(data_file_path)
     SuccessDocking.save(success_file_path)
     # print(count)

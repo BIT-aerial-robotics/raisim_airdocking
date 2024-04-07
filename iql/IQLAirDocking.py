@@ -228,7 +228,7 @@ agent_info_dict = {
     'q_critic': Critic_net,
     's_value': S_Value_net,
     'agent_params': parameters,
-    'expert_dataset_path': '/home/ming/aaa/AquaML-2.2.0/dataset/Joint200',
+    'expert_dataset_path': '/dataset/Joint200',
 }
 
 offline_rl = AquaRL(

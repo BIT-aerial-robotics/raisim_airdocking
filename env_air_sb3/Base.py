@@ -24,16 +24,16 @@ from env_air_sb3.reward import *
 噪声的加入放入了Dynamic中
 """
 class quadrotorEnv():
-    def __init__(self, file_="/home/fyt/project/quad_raisim/rsc/F450_1009/F450.urdf", sense_noise = None, 
+    def __init__(self, file_="./rsc/F450_1009/F450.urdf", sense_noise = None, 
                  name = "F450", control_name = None,first = True, world= None, others={},
                  desired_force=np.zeros(3),
                  reward_type="sou",
                  rew_coeff=dict(),
                  max_step=700,
                  dt=0.005,
-                 model_file = "/home/fyt/project/quad_raisim/models/thrust_omega/seed_001/network_evaluate.so"  # TODO
+                 model_file = "/seed_001/network_evaluate.so"  # TODO
                 ):
-        raisim.World.setLicenseFile("/home/ming/.raisim/activation.raisim")
+        raisim.World.setLicenseFile("/.raisim/activation.raisim")
         self.server = False
         self.goal = goal
         self.quadrotor_urdf_file = file_

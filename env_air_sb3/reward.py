@@ -1,7 +1,7 @@
 import numpy as np
 import pdb
 import sys
-sys.path.append("/home/fyt/raisim_workspace/raisim_quadrotor/raisim_bit/quad_raisim")
+sys.path.append("..")
 from controller.quad_utils import *
 import transforms3d as t3d
 
