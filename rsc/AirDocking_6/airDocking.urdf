@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     xyz="0.127718685482746 -0.139042615886204 0.0883635164726831"
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="airDocking6">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00548302792620524 -0.00290479497045265 0.0544951992201632"
+        rpy="0 0 0" />
+      <mass
+        value="1.911037040574895" />
+      <inertia
+        ixx="0.02"
+        ixy="-4.90754358741268E-09"
+        ixz="1.8018720691711E-08"
+        iyy="0.02"
+        iyz="-1.98788335056112E-08"
+        izz="0.045" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/body_Link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/body_Link.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="body_link">
+    <inertial>
+      <origin
+        xyz="0. 0. 0."
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.0004"
+        ixy="7.02103223113326E-12"
+        ixz="-1.45980068820384E-11"
+        iyy="0.06"
+        iyz="-3.8820295471181E-11"
+        izz="0.06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/base_link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.223529411764706 0.223529411764706 0.223529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/base_link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="body_joint"
+    type="fixed">
+    <origin
+      xyz="-0.12042 0.11625 -0.11959"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="body_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link
+    name="prop1_Link">
+    <inertial>
+      <origin
+        xyz="5.45852847672057E-07 -4.81050333234201E-07 0.0113172497944415"
+        rpy="0 0 0" />
+      <mass
+        value="0.0434134470816852" />
+      <inertia
+        ixx="6.85438118194511E-05"
+        ixy="6.26117391341577E-05"
+        ixz="-1.07961455894735E-11"
+        iyy="5.88476484364724E-05"
+        iyz="2.78036452516803E-11"
+        izz="0.000126622157642998" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/prop1_Link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/prop1_Link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_joint1"
+    type="continuous">
+    <origin
+      xyz="0.16612 -0.16366 0.085006"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop1_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="prop2_Link">
+    <inertial>
+      <origin
+        xyz="-8.71041495431601E-07 -1.30447378648979E-06 0.00881709864646676"
+        rpy="0 0 0" />
+      <mass
+        value="0.043411107701819" />
+      <inertia
+        ixx="7.36711907112284E-05"
+        ixy="-6.1998302229042E-05"
+        ixz="3.84200896495854E-11"
+        iyy="5.37141893317674E-05"
+        iyz="1.01273023321896E-10"
+        izz="0.000126616115137962" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/prop2_Link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/prop2_Link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_joint2"
+    type="continuous">
+    <origin
+      xyz="-0.15192 -0.16503 0.087506"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop2_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="prop3_Link">
+    <inertial>
+      <origin
+        xyz="0.00821496710511732 -0.00218875966969181 0.00723140822480168"
+        rpy="0 0 0" />
+      <mass
+        value="0.0434110721971107" />
+      <inertia
+        ixx="2.66958783202139E-05"
+        ixy="5.07414097535697E-05"
+        ixz="-1.12217578272378E-10"
+        iyy="0.000100693176122286"
+        iyz="2.25117944200145E-11"
+        izz="0.000126619799321776" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/prop3_Link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/prop3_Link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_joint3"
+    type="continuous">
+    <origin
+      xyz="-0.16124 0.15818 0.089091"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop3_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="prop4_Link">
+    <inertial>
+      <origin
+        xyz="-7.63029578021435E-07 -1.16179845374709E-06 0.0113171260055646"
+        rpy="0 0 0" />
+      <mass
+        value="0.0434117418859216" />
+      <inertia
+        ixx="6.96185872190908E-05"
+        ixy="-6.25190062101873E-05"
+        ixz="8.71679455675114E-11"
+        iyy="5.77723828725331E-05"
+        iyz="1.1416921055519E-10"
+        izz="0.00012662170891755" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/prop4_Link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/prop4_Link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_joint4"
+    type="continuous">
+    <origin
+      xyz="0.16637 0.15574 0.085006"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop4_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="tip_Link">
+    <inertial>
+      <origin
+        xyz="-4.6603451341054E-09 0.0359318967356096 2.90928610369168E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="7.80533366854298E-05"
+        ixy="-4.00057962557678E-12"
+        ixz="1.52455443700944E-11"
+        iyy="9.97620480021254E-05"
+        iyz="-7.60948845685672E-12"
+        izz="7.80533112236765E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/tip_Link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/tip_Link.obj" />
+      </geometry>
+      <material name="">
+        <contact name="2Al2"/>
+      </material>
+    </collision>
+  </link>
+  <joint
+    name="tip_joint"
+    type="fixed">
+    <origin
+      xyz="0.0 0.27 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="tip_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="cy_Link">
+    <inertial>
+      <origin
+        xyz="-1.694755794035E-11 -0.0487045284447744 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.000198213952562773"
+        ixy="-8.79674804479733E-16"
+        ixz="9.19348423888508E-20"
+        iyy="0.000195686369099378"
+        iyz="-8.23409343102761E-20"
+        izz="0.000298213952562773" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/cy_Link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./obj/cy_Link.obj" />
+      </geometry>
+      <material name="">
+        <contact name="2Al2"/>
+      </material>
+    </collision>
+  </link>
+  <joint
+    name="cy_joint"
+    type="fixed">
+    <origin
+      xyz="0.0 -0.31 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cy_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
