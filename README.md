@@ -2,11 +2,10 @@
 
 ## Dependencies
 
----
 
 ## Installation
 
----
+
 
 ### Step 0
 
@@ -31,7 +30,7 @@ cd raisim_airdocking
 
 ## Training
 
----
+
 
 The repository provides a training example connected to the environment based on IQL, which can be referenced for training purposes.
 
@@ -42,7 +41,7 @@ python IQLAirDocking.py
 
 ## Test
 
----
+
 
 ```
 cd iql
