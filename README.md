@@ -3,11 +3,11 @@
 ## Dependencies
 
 
-## Installation
+### Installation
 
 
 
-### Step 0
+#### Step 0
 
 ##### Create directory for all projects:
 
@@ -18,7 +18,7 @@ cd ~/raisim_workspace
 
 Instead of `~/raisim_worspace` you could use any directory you like. It is given just as an example
 
-### Step 1
+#### Step 1
 
 Clone this repository:
 
