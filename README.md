@@ -1,6 +1,9 @@
 # raisim_airdocking
 
 ## Dependencies
+- [RaiSim](https://raisim.com/sections/Installation.html)
+
+- [Aquaml](https://github.com/BIT-aerial-robotics/AquaML)
 
 
 ### Installation
